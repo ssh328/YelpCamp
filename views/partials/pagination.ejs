@@ -1,0 +1,39 @@
+<div class="d-flex justify-content-center">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <% if (startPageNum > 1) { %>
+                <li class="page-item">
+                    <a class="page-link" href="/campgrounds?page=<%= startPageNum - 1 %>" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+            <% } else { %>
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+            <% } %>
+
+            <% for (let i = startPageNum; i <= endPageNum; i++) { %>
+                <li class="page-item <%= i === currentPage ? 'active' : '' %>">
+                    <a class="page-link" href="/campgrounds?page=<%= i %>"><%= i %></a>
+                </li>
+            <% } %>
+
+            <% if (endPageNum < totalPages) { %>
+                <li class="page-item">
+                    <a class="page-link" href="/campgrounds?page=<%= endPageNum + 1 %>" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            <% } else { %>
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            <% } %>
+        </ul>
+    </nav>
+</div>
