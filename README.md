@@ -51,3 +51,20 @@ YelpCamp는 캠핑장 리뷰 및 정보 공유 플랫폼입니다. 사용자들�
 - Express-mongo-sanitize
 - JOI (데이터 검증)
 - Sanitize-html
+
+## 💻실행 방법
+1. Git clone 사용 또는, 다운로드
+```
+cd YelpCamp
+npm install
+```
+2. .env 파일 생성 후 아래 내용 추가
+- CLOUDINARY_CLOUD_NAME=your_cloud_name
+- CLOUDINARY_KEY=your_key
+- CLOUDINARY_SECRET=your_secret
+- MAPBOX_TOKEN=your_mapbox_token
+- DB=your_db
+```
+node app.js
+```
+4. 웹 브라우저 접속 <http://localhost:3000/>
