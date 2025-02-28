@@ -59,11 +59,11 @@ cd YelpCamp
 npm install
 ```
 2. .env 파일 생성 후 아래 내용 추가
-- CLOUDINARY_CLOUD_NAME=your_cloud_name
-- CLOUDINARY_KEY=your_key
-- CLOUDINARY_SECRET=your_secret
-- MAPBOX_TOKEN=your_mapbox_token
-- DB=your_db
+- CLOUDINARY_CLOUD_NAME=your-cloud-name
+- CLOUDINARY_KEY=your-key
+- CLOUDINARY_SECRET=your-secret
+- MAPBOX_TOKEN=your-mapbox-token
+- DB=your-db
 ```
 node app.js
 ```
